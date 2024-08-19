@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* We basically uses the * for universal selector which helps to set the margin and padding of our whole page to zero*/
+        .box {
+            background-color: aqua;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid black;
+            height: 100px;
+            box-sizing: border-box;
+            /* it means the height is for content plus border plus padding*/
+            /*and without this there in no include of border and padding only content height will be there*/
+
+        }
+
+        .box2 {
+            background-color: aquamarine;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid black;
+            height: 100px;
+            box-sizing: border-box;
+        }
+
+        /*Remeber here that between the both 2 boxes our webpage will automatically take the largest one as the largest is 10px only(margin for both the boxes) so it will take the 10px only*/
+        /*this is also known as [Margin collapse concept] */
+    </style> <!--so here we basically use .box or .anything just to call the class created under div element-->
+</head>
+
+<body>
+    <div class="box"> I am a Box</div>
+    <!--here we use div.box or any other div dot anything just to add any random class for writing this statement-->
+    <div class="box2">I am Another box</div>
+</body>
+
+</html>
